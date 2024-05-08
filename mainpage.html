@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/images/StudyBuddiesLogo.png"
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Study Buddies - Download The App from Study Sync LLC</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/mymaincss.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+  </head>
+
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
+
+
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+           
+            <a href="mainpage.html" class="logo">
+              <img src="assets/images/CompanyLogo.png" alt="Study Sync">
+            </a>
+           
+
+
+
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#services">Features</a></li>
+              <li class="scroll-to-section"><a href="#about">About Us</a></li>
+              <li class="scroll-to-section"><a href="#pricing">Pricing Plan</a></li>
+              <li class="scroll-to-section"><a href="#newsletter">Keep in Touch</a></li>
+              <li><div class="gradient-button"><a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  
+  <div id="modal" class="popupContainer" style="display:none;">
+    <div class="popupHeader">
+        <span class="header_title">Login</span>
+        <span class="modal_close"><i class="fa fa-times"></i></span>
+    </div>
+
+    <section class="popupBody">
+        <!-- Social Login -->
+        <div class="social_login">
+            <div class="">
+                <a href="#" class="social_box fb">
+                    <span class="icon"><i class="fab fa-facebook"></i></span>
+                    <span class="icon_title">Connect with Facebook</span>
+
+                </a>
+
+                <a href="#" class="social_box google">
+                    <span class="icon"><i class="fab fa-google-plus"></i></span>
+                    <span class="icon_title">Connect with Google</span>
+                </a>
+            </div>
+
+            <div class="centeredText">
+                <span>Or use your Email address</span>
+            </div>
+
+            <div class="action_btns">
+                <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
+                <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+            </div>
+        </div>
+
+        <!-- Username & Password Login form -->
+        <div class="user_login">
+            <form>
+                <label>Email / Username</label>
+                <input type="text" />
+                <br />
+
+                <label>Password</label>
+                <input type="password" />
+                <br />
+
+                <div class="checkbox">
+                    <input id="remember" type="checkbox" />
+                    <label for="remember">Remember me on this computer</label>
+                </div>
+
+                <div class="action_btns">
+                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                    <div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
+                </div>
+            </form>
+
+            <a href="#" class="forgot_password">Forgot password?</a>
+        </div>
+
+        <!-- Register Form -->
+        <div class="user_register">
+            <form>
+                <label>Full Name</label>
+                <input type="text" />
+                <br />
+
+                <label>Email Address</label>
+                <input type="email" />
+                <br />
+
+                <label>Password</label>
+                <input type="password" />
+                <br />
+
+                <div class="checkbox">
+                    <input id="send_updates" type="checkbox" />
+                    <label for="send_updates">Send me occasional email updates</label>
+                </div>
+
+                <div class="action_btns">
+                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                    <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Get Our Latest App From <strong>Study Sync</strong></h2>
+                    <h3>New Release: Study Buddies</h3>
+                    <p><i>A Student Collaborative Ssytem Application. It's a new release from Study Sync LLC this 2024 to help students to find match interest in terms of academics. Explore more for some advanced features.</i></p>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="white-button first-button scroll-to-section">
+                      <a href="setup/Setup-SB-2024.exe" download="SB Installer">Download Now! <i class="fab fa-windows"></i></a>
+                    </div>
+                    <div class="white-button scroll-to-section">
+                      <a href="Google Play - Clone/pages/GP-StudyBuddies.html" target="_blank">Google Play Store <i class="fab fa-google-play"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="assets/images/SystemLogo.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Special <em>Services &amp; Features</em> for you</h4>
+            <img src="assets/images/blueline.png" alt="">
+            <p>Unlock unique benefits suited to your needs with our App. From personalized study plans to one-on-one tutoring sessions, we're committed to enhancing your learning journey every step of the way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="service-item first-service">
+            <div class="icon"></div>
+            <h4>Matching Algorithms</h4>
+            <p>A matching algorithm, a computational process used to determine the compatibility between two or more students with the help of different preferences, like courses, subjects, and many more</p>
+            <div class="text-button">
+              <a href="https://www.iteratorshq.com/blog/how-matching-algorithms-can-help-your-user-get-a-perfect-pairing/" target="_blank">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item second-service">
+            <div class="icon"></div>
+            <h4>Tutoring Programs</h4>
+            <p> This features includes teachers, tutors, or even knowledgeable students can sign up to be tutors within the app and learners can hire tutors and they get paid for their expertise.</p>
+            <div class="text-button">
+              <a href="https://tesidea.com/blog/the-undeniable-benefits-of-tutoring-and-how-it-helps-your-students/" target="_blank">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item third-service">
+            <div class="icon"></div>
+            <h4>Collaborative Tools</h4>
+            <p>Boost your collaborative learning experience with Study Buddy's Integrated set of tools, including real-time chats, video calls, interactive study rooms, and engaging forums.</p>
+            <div class="text-button">
+              <a href="https://advantages-dls.com/benefits-of-online-collaboration-tools/"  target="_blank">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>  
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item fourth-service">
+            <div class="icon"></div>
+            <h4>Interactive Guides</h4>
+            <p>Explore into exciting learning experiences. Seamlessly navigate through rich multimedia content, interactive quizzes, and interesting activities suited to your learning needs.</p>
+            <div class="text-button">
+              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="section-heading">
+            <h4>About <em>Our Company</em> &amp; What We Do</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Study Sync LLC is dedicated to revolutionizing the education sector by providing innovative technology solutions to enhance learning experiences. 
+              We recognize the growing need for effective study tools and platforms that cater to the modern student's/learner's lifestyle. 
+              To address this demand, we have develop our latest Application Software called Study Buddies App designed to facilitate collaborative learning, 
+              improve academic performance, and foster a supportive community among students and learners.</p>
+
+              <br><br>
+              <h4> Our <em>Company Goals</em> to Learners</h4>
+             
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#">Development skills</a></h4>
+                <p> Helps learners to acquire new skills and knowledge. The use of technology in education also helps a lot of learners to gain new skills and enrich their knowledge</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#">Learning</a></h4>
+                <p>Every student learns at their own pace and has different strengths and weaknesses. They are not only required to learn but they also need to have fun while doing so. </p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#">Better productivity</a></h4>
+                <p> With online collaboration allowing learners from any location, They can work at their most productive hours and schedule check-ins with other learners who are away.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box-item">
+                <h4><a href="#">Comunication</a></h4>
+                <p>Communication between teachers, students, and lerners is essential to promote learning cooperation and promotes children’s growth and performance. </p>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <p>"Creativity is seeing what others see and thinking what no one else ever thought." – Albert Einstein.</p>
+              <div class="gradient-button">
+                <a href="#">Try StudyBuddies App Now!</a>
+              </div>
+              <span>*Available on Windows and Google Play Store</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="right-image">
+            <img src="assets/images/about-pic-ft.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="clients" class="the-clients">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading">
+            <h4>Meet our <em>Development Team</em> - Study Sync LLC</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Meet the innovative minds who brought technology solutions to life: our passionate development team. They put in continuous effort to make sure the innovation changes according to educational demands because they have a wide range of knowledge and a passion for developing effective learning solutions.</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-7 align-self-center">
+                  <div class="menu">
+                    <div class="first-thumb active">
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Rovick Bench Cruz</h4>
+                            <span class="date">20 April 2024</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Project Manager</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <span class="rating">5.0</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Sofia Anna Dacara</h4>
+                            <span class="date">29 April 2024</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Sales and Marketing Specialist</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <span class="rating">5.0</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Rachelle Rotia</h4>
+                            <span class="date">27 April 2024</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Business Analyst</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <span class="rating">5.0</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Rey Dominic Red</h4>
+                            <span class="date">24 April 2024</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Technical Support</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <span class="rating">5.0</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="last-thumb">
+                      <div class="thumb">
+                        <div class="row">
+                          <div class="col-lg-4 col-sm-4 col-12">
+                            <h4>Lemuel James Leonora</h4>
+                            <span class="date">25 April 2024</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
+                            <span class="category">Software Developer</span>
+                          </div>
+                          <div class="col-lg-4 col-sm-4 col-12">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <span class="rating">5.0</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+                <div class="col-lg-5">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="assets/images/quote.png" alt="">
+                                <p>“In my role as project manager and CEO, I facilitated communication between programmers, designers, and content creators, which led to the swift launch of an accessible and full of features learning platform.”</p>
+                              </div>
+                              <div class="down-content">
+                                <img src="assets/images/thirdypogi.jpg" alt="">
+                                <div class="right-content">
+                                  <h4>Rovick Bench Cruz</h4>
+                                  <span>Project Manager and CEO</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="assets/images/quote.png" alt="">
+                                <p>“As a sales and marketing specialist for our company, I collaborated effectively with the team to fully understand user demands, create appealing advertisement, and conduct at targeted campaigns through a variety of channels, each of it significantly increased app downloads and user engagement.”</p>
+                              </div>
+                              <div class="down-content">
+                                <img src="assets/images/client-image.jpg" alt="">
+                                <div class="right-content">
+                                  <h4>Sofia Anna Dacara</h4>
+                                  <span>Sales and Marketing Specialist</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="assets/images/quote.png" alt="">
+                                <p>“In my role as a business analyst supporting modern innovation, I analyzed user data and market trends to identify opportunities for product improvement and expansion. By providing insights into user behavior and competitor analysis, I supported strategic decision-making, ultimately contributing to the app's continued success and growth.”</p>
+                              </div>
+                              <div class="down-content">
+                                <img src="assets/images/client-image.jpg" alt="">
+                                <div class="right-content">
+                                  <h4>Rachelle Rotia</h4>
+                                  <span>Business Analyst</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="assets/images/quote.png" alt="">
+                                <p>“During my current position at Study Sync Company, I was responsible for providing technical support to over 1000 employees. Part of my daily duties included troubleshooting software and hardware issues. On average, I resolved around 30 technical support tickets per week.”</p>
+                              </div>
+                              <div class="down-content">
+                                <img src="assets/images/Red.jpg" alt="">
+                                <div class="right-content">
+                                  <h4>Rey Dominic Red</h4>
+                                  <span>Technical Support</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <img src="assets/images/quote.png" alt="">
+                                <p>“Prior to my senior role, I worked as a software engineer for First Technology and a programmer for Software and Mobile. Because I've already held all the other positions in this field, I have keen insight into what it takes to run a successful project. My career goal is to move into management as a CTO, and I know this role would help me hone my leadership skills”</p>
+                              </div>
+                              <div class="down-content">
+                                <img src="assets/images/LJames.jpg" alt="">
+                                <div class="right-content">
+                                  <h4>Lemuel James Leonora</h4>
+                                  <span>Software Developer</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="pricing" class="pricing-tables">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading">
+            <h4>We Have The Best Pre-Order <em>Prices</em> You Can Get</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item-pro">
+            <span class="price">Free!</span>
+            <h4>Standard Plan</h4>
+            <div class="icon">
+              <img src="assets/images/pricing-table-01.png" alt="">
+            </div>
+            <ul>
+              <li>Lorem Ipsum Dolores</li>
+              <li>20 TB of Storage</li>
+              <li class="non-function">Life-time Support</li>
+              <li class="non-function">Premium Add-Ons</li>
+              <li class="non-function">Fastest Network</li>
+              <li class="non-function">More Options</li>
+            </ul>
+            <div class="border-button">
+              <a href="#">Purchase This Plan Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item-pro">
+            <span class="price">EWAN!</span>
+            <h4>Professional Plan</h4>
+            <div class="icon">
+              <img src="assets/images/pricing-table-01.png" alt="">
+            </div>
+            <ul>
+              <li>Lorem Ipsum Dolores</li>
+              <li>50 TB of Storage</li>
+              <li>Life-time Support</li>
+              <li>Premium Add-Ons</li>
+              <li class="non-function">Fastest Network</li>
+              <li class="non-function">More Options</li>
+            </ul>
+            <div class="border-button">
+              <a href="#">Purchase This Plan Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item-pro">
+            <span class="price">PISO</span>
+            <h4>Premium Plan</h4>
+            <div class="icon">
+              <img src="assets/images/pricing-table-01.png" alt="">
+            </div>
+            <ul>
+              <li>Lorem Ipsum Dolores</li>
+              <li>120 TB of Storage</li>
+              <li>Life-time Support</li>
+              <li>Premium Add-Ons</li>
+              <li>Fastest Network</li>
+              <li>More Options</li>
+            </ul>
+            <div class="border-button">
+              <a href="#">Purchase This Plan Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <footer id="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading">
+            <h4>Join our mailing list to receive Live Demo on our Latest Apps &amp; Software</h4>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-3">
+          <form id="search" action="#" method="GET">
+            <div class="row">
+              <div class="col-lg-6 col-sm-6">
+                <fieldset>
+                  <input type="address" name="address" class="email" placeholder="Email Address..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6 col-sm-6">
+                <fieldset>
+                  <a href="email-verfication.html">
+                  <button class="main-button">Join Now! </a><i class="fa fa-angle-right"></i></button>
+                </a>
+                  
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>Contact Us</h4>
+            <p>Lemuel James Leonora - Developer (09123456789), Philippines</p>
+            <p><a href="#">010-020-0340</a></p>
+            <p><a href="#">info@studysync.edu.ph</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>About Us</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Pricing</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>Related Links</h4>
+            <ul>
+              <li><a href="#">Free Apps</a></li>
+              <li><a href="#">App Engine</a></li>
+              <li><a href="#">Programming</a></li>
+              <li><a href="#">Development</a></li>
+              <li><a href="#">App News</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">App Dev Team</a></li>
+              <li><a href="#">Collaborative</a></li>
+              <li><a href="#">Normal Apps</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-widget">
+            <h4>About Our Company</h4>
+            <div class="logo">
+              <img src="assets/images/CompanyLogo.png" alt="StudySync" width="1000px">
+            </div>
+            <p>Study Sync LLC is dedicated to revolutionizing the education sector by providing innovative technology solutions to enhance learning experiences.</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright-text">
+            <p><strong>Copyright © 2024</strong> Study Buddies | Study Sync LLC. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    window.history.forward();
+    function noBack()
+    {
+        window.history.forward();
+    }
+  </script>
+
+</body>
+</html>
