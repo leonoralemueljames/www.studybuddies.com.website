@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/StudyBuddiesLogo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tailwindcss-colors.css">
+    <link rel="stylesheet" href="assets/css/payment-info-premium.css">
+
+<!-- SweetAlert2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
+    <title>Study Buddies - Billing Information and Payment Method Process</title>
+</head>
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
+
+    
+    <div class='pre-loader'>
+        <img class='loading-gif' alt='loading' src="assets/images/payment-pre-loader.gif"/>
+         
+    </div>
+    
+    <!-- start: Payment -->
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-wrapper">
+                <div class="payment-left">
+                    <div class="payment-header">
+                        <div class="payment-header-icon"><i class="ri-flashlight-fill"></i></div>
+                        <div class="payment-header-title">Order Summary</div>
+                        <p class="payment-header-description">Study Buddies Premium Account Subscription</p>
+                    </div>
+                    <div class="payment-content">
+                        <div class="payment-body">
+                            <div class="payment-plan">
+                                <div class="payment-plan-type"><img src="assets/images/SB-Redirect.png" alt="" width="40" height="40"></div>
+                                <div class="payment-plan-info">
+                                    <div class="payment-plan-info-name">Premium Plan</div>
+                                    <div class="payment-plan-info-price">₱499 per month</div>
+                                </div>
+                                <a href="#" class="payment-plan-change">Change</a>
+                            </div>
+                            <div class="payment-summary">
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Convenience fee</div>
+                                    <div class="payment-summary-price">₱10.00</div>
+                                </div>
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Discount 20%</div>
+                                    <div class="payment-summary-price">-₱0.00</div>
+                                </div>
+                                <div class="payment-summary-divider"></div>
+                                <div class="payment-summary-item payment-summary-total">
+                                    <div class="payment-summary-name">Total</div>
+                                    <div class="payment-summary-price">-₱509.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-right">
+                    <form class="payment-form">
+                        <h1 class="payment-title">Payment Details</h1>
+                        <div class="payment-method">
+                            <input type="radio" name="payment-method">
+                            <label class="payment-method-item">
+                                <img src="assets/images/visa.png" alt="">
+                            </label>
+                            <input type="radio" name="payment-method"s>
+                            <label  class="payment-method-item">
+                                <img src="assets/images/mastercard.png" alt="">
+                            </label>
+                            <input type="radio" name="payment-method">
+                            <label class="payment-method-item">
+                                <img src="assets/images/gcash.png" alt="gcash" width="500" height="400">
+                            </label>
+                            <input type="radio" name="payment-method">
+                            <label class="payment-method-item">
+                                <img src="assets/images/google-pay.png" alt="">
+                            </label>
+                        </div>
+                        <div class="payment-form-group">
+                            <input type="email" placeholder=" " class="payment-form-control">
+                            <label class="payment-form-label payment-form-label-required">Email Address</label>
+                        </div>
+                        <div class="payment-form-group">
+                            <input type="text" placeholder=" " class="payment-form-control">
+                            <label class="payment-form-label payment-form-label-required">Phone Number</label>
+                        </div>
+
+                        <div class="payment-form-group">
+                            <input type="text" placeholder=" " class="payment-form-control">
+                            <label  class="payment-form-label payment-form-label-required">Card Number (Card Method Only)</label>
+                        </div>
+
+                        <div class="payment-form-group-flex">
+                            <div class="payment-form-group">
+                                <input type="date" placeholder=" " class="payment-form-control">
+                                <label class="payment-form-label payment-form-label-required">Expiry Date</label>
+                            </div>
+                            <div class="payment-form-group">
+                                <input type="text" placeholder=" " class="payment-form-control">
+                                <label for="cvv" class="payment-form-label payment-form-label-required">CVV</label>
+                            </div>
+                        </div>
+                        <button  id="success" class="payment-form-submit-button" formaction="#"><i class="ri-wallet-line"></i> Pay</button>
+                        <button id="error"  class="payment-form-submit-button-cancel" formaction="#"><i class=" ri-reply-line"></i> Cancel Order</button>
+                        
+                    </form>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script type='text/javascript'>
+        window.addEventListener('load', function () {
+            document.querySelector('.pre-loader').className += ' hidden';
+        });
+
+        
+        $(document).on('click', '#success', function(e) {
+            swal({
+				title: "Thank you!", 
+				text: "Thank you for your payment. We are grateful for your business and would like to show our appreciation even as we continue to serve you well into the future.", 
+				type: "success",
+                button: true,
+				confirmButtonText: "Back to Mainpage.",
+                closeOnClickOutside: false,
+               
+                
+				
+		    })
+      
+		    	.then((result) => {
+					if (result.value) {
+					    window.location = 'index.html';
+					} 
+				})
+        
+		} );
+
+        $(document).on('click', '#error', function(e) {
+            swal({
+				title: "Order Cancelled.", 
+				html: "Your subscription has cancelled.", 
+				type: "error",
+                buttons: true,
+                
+				
+        
+		    })
+      
+		    .then(function() {
+             window.location = "index.html#pricing";
+});
+        1
+		});
+    </script>
+
+
+</body>
+</html>

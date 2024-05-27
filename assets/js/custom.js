@@ -32,7 +32,8 @@
           },
           760:{
             items:2
-        }
+        } 
+            
       }
   });
   
@@ -91,7 +92,7 @@ $(function() {
   if($('.menu-trigger').length){
     $(".menu-trigger").on('click', function() { 
       $(this).toggleClass('active');
-      $('.header-area .nav').slideToggle(200);
+      $('.header-area .nav').slideToggle(300);
     });
   }
 
@@ -188,7 +189,7 @@ $(function() {
   function mobileNav() {
     var width = $(window).width();
     $('.submenu').on('click', function() {
-      if(width < 767) {
+      if(width < 992) {
         $('.submenu ul').removeClass('active');
         $(this).find('ul').toggleClass('active');
       }

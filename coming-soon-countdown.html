@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/images/StudyBuddiesLogo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddies - Coming Soon</title>
+    <link rel="stylesheet" href="assets/css/coming-soon-countdown.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+</head>
+<body>
+
+  	
+		<div id="preloader">
+			<div id="container" class="container-preloader">
+				<div class="animation-preloader">
+					<div class="spinner"></div>
+					<div class="txt-loading">
+						<span preloader-text="S" class="characters">S</span>
+						
+						<span preloader-text="T" class="characters">T</span>
+						
+						<span preloader-text="U" class="characters">U</span>
+						
+						<span preloader-text="D" class="characters">D</span>
+						
+						<span preloader-text="Y" class="characters">Y</span>
+						
+						<span preloader-text="B" class="characters">B</span>
+						
+						<span preloader-text="U" class="characters">U</span>
+
+            <span preloader-text="D" class="characters">D</span>
+
+            <span preloader-text="D" class="characters">D</span>
+
+            <span preloader-text="I" class="characters">I</span>
+
+            <span preloader-text="E" class="characters">E</span>
+
+            <span preloader-text="S" class="characters">S</span>
+          
+            
+					</div>
+				</div>	
+				<div class="loader-section section-left"></div>
+				<div class="loader-section section-right"></div>
+			</div>
+		</div>	
+
+
+
+   
+  
+    <div class="container">
+
+      <svg height="100" width="100">
+        <circle cx="50" cy="50" r="31" stroke="#679b08" stroke-width="9.5" fill="none" />
+        <circle cx="50" cy="50" r="6" stroke="#679b08" stroke-width="1" fill="#679b08" />
+        <line x1="50" y1="50" x2="35" y2="50" style="stroke:#679b08;stroke-width:6" />
+        <line x1="65" y1="35" x2="50" y2="50" style="stroke:#679b08;stroke-width:6" />
+        <path d="M59 65 L83 65 L75 87 Z" fill="#679b08" />
+        <rect width="20" height="9" x="70" y="56" style="fill:#eee;stroke-width:0;" />
+      </svg>
+
+
+    
+
+      <a href="javascript:void(0)" id="backToTop" class="back-to-top" style="display:none;">
+  <svg class="icon__arrow-up" viewBox="0 0 24 24">
+    <title>Back to top</title>
+    <path d="M18.71,11.71a1,1,0,0,1-1.42,0L13,7.41V19a1,1,0,0,1-2,0V7.41l-4.29,4.3a1,1,0,0,1-1.42-1.42l6-6a1,1,0,0,1,1.42,0l6,6A1,1,0,0,1,18.71,11.71Z"/>
+  </svg>
+</a>
+     
+
+        <h1>Coming Soon</h1>
+        
+        <p>
+          We are excited to announce that we will be launching soon and can't wait to share our new platform with you.
+        </p>
+          <div id="countdown">
+            <ul>
+              <li><span class="days"></span>days</li>
+              <li><span class="hours"></span>Hours</li>
+              <li><span class="minutes"></span>Minutes</li>
+              <li><span class="seconds"></span>Seconds</li>
+            </ul>
+          </div>
+          <img class="logo" src="assets/images/SB-Redirect.png" alt="coming-soon-icon">
+
+          <p class="text">Study Sync LLC is dedicated to revolutionizing the education sector by providing innovative technology solutions to enhance learning experiences. 
+            We recognize the growing need for effective study tools and platforms that cater to the modern student's/learner's lifestyle. 
+            To address this demand, we have develop our latest Application Software called Study Buddies App designed to facilitate collaborative learning, 
+            improve academic performance, and foster a supportive community among students and learners.</p>
+            
+           
+
+      </div>
+
+      <div class="sub-main">
+        <button onclick="window.location.href = 'index.html';" class="button-two"><span>Back to Page</span></button>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <center><iframe class="video"    width="560" height="315" src="https://www.youtube.com/embed/PRbhT3Xdq5w?si=8pWvABE66PrlBDz3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+    
+      <a href="#" class="top">Back to Top</a>
+
+      
+
+    <script>
+
+
+window.history.forward();
+    function noBack()
+    {
+        window.history.forward();
+    }
+
+$(document).ready(function() {
+  setTimeout(function() {
+    $('#container').addClass('loaded');
+    // Once the container has finished, the scroll appears
+    if ($('#container').hasClass('loaded')) {
+      // It is so that once the container is gone, the entire preloader section is deleted
+      $('#preloader').delay(9000).queue(function() {
+        $(this).remove();
+      });}
+  }, 3000);});
+
+
+      // Get html elements
+    let day = document.querySelector('.days');
+    let hour = document.querySelector('.hours');
+    let minute = document.querySelector('.minutes');
+    let second = document.querySelector('.seconds');
+
+function setCountdown() {
+
+    // Set countdown date
+    let countdownDate = new Date('Jul 10, 2024 16:40:25').getTime();
+
+    // Update countdown every second
+    let updateCount = setInterval(function(){
+
+        // Get today's date and time
+        let todayDate = new Date().getTime();
+
+        // Get distance between now and countdown date
+        let distance = countdownDate - todayDate;
+
+        let days = Math.floor(distance / (1000 * 60 * 60 *24));
+
+        let hours = Math.floor(distance % (1000 * 60 * 60 *24) / (1000 * 60 *60));
+
+        let minutes = Math.floor(distance % (1000 * 60 * 60 ) / (1000 * 60));
+
+        let seconds = Math.floor(distance % (1000 * 60) / 1000);
+
+        // Display values in html elements
+        day.textContent = days;
+        hour.textContent = hours;
+        minute.textContent = minutes;
+        second.textContent = seconds;
+
+        // if countdown expires
+        if(distance < 0){
+            clearInterval(updateCount);
+            document.querySelector(".container").innerHTML = '<h1>App Released.</h1>'
+        }
+    }, 1000)
+}
+
+setCountdown()
+
+
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+
+const colorSwitcher = document.querySelector("[data-theme-color-switch]");
+let currentTheme = "light";
+
+colorSwitcher.addEventListener("click", function () {
+	const root = document.documentElement;
+
+	if (currentTheme == "dark") {
+		root.style.setProperty("--bg-color", "#fff");
+		root.style.setProperty("--text-color", "#000");
+		colorSwitcher.textContent = "\u{1F319}";
+		currentTheme = "light";
+	} else {
+		root.style.setProperty("--bg-color", "#050505");
+		root.style.setProperty("--text-color", "#fff");
+		colorSwitcher.textContent = "\u{2600}";
+		currentTheme = "dark";
+	}
+
+	colorSwitcher.setAttribute("data-theme", currentTheme);
+});
+
+
+    </script>
+</body>
+</html>

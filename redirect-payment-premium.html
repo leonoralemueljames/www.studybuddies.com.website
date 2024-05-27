@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8" />
+    <link rel="icon" href="assets/images/StudyBuddiesLogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/redirect-payment1.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+     <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
+    <title>Study Buddies - Redirecting ......</title>
+  </head>
+  <body>
+
+   <div class="wrapper">
+      <div class="logo">
+          <img src="assets/images/SB-Redirect.png" alt="">
+      </div>  
+
+  <br><br>
+<h1>Just a moment...</h1>
+<div class="slider">
+	<div class="line"></div>
+	<div class="break dot1"></div>
+	<div class="break dot2"></div>
+	<div class="break dot3"></div>
+</div>
+<p>You should be automatically redirected in <span id="seconds" style="color: rgb(5, 116, 42);">7</span> second.</p>
+
+<button class="button-45" id="error"> Cancel </button>
+
+</div>
+
+
+
+
+
+<script type='text/javascript'>
+
+window.addEventListener('load', function () {
+            document.querySelector('.pre-loader').className += ' hidden';
+        });
+        	$(document).on('click', '#error', function(e) {
+            swal({
+				title: "Are you sure?", 
+				text: "You will be redirected to our mainpage", 
+				type: "warning",
+				confirmButtonText: "Yes, Proceed!",
+				showCancelButton: true
+		    })
+      
+		    	.then((result) => {
+					if (result.value) {
+					    window.location = 'index.html#pricing';
+					} 
+				})
+        1
+		} );
+  
+    window.history.forward();
+    function noBack()
+    {
+        window.history.forward();
+    }
+
+   var el = document.getElementById('seconds'),
+    total = el.innerHTML,
+    timeinterval = setInterval(function () {
+        total = --total;
+        el.textContent = total;
+        if (total <= 0) {
+            clearInterval(timeinterval);
+            window.location = 'payment-info-premium.html';
+        }
+    }, 1000);
+
+  
+    </script>
+
+
+
+   
+  </body>
+</html>

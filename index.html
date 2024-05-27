@@ -4,22 +4,29 @@
   <head>
 
     <meta charset="UTF-8">
-    <link rel="icon" href="assets/images/StudyBuddiesLogo.png"
+    <link rel="icon" href="assets/images/StudyBuddiesLogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    
     <title>Study Buddies - Download The App from Study Sync LLC</title>
 
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/mymaincss.css">
     <link rel="stylesheet" href="assets/css/animated.css">
     <link rel="stylesheet" href="assets/css/owl.css">
+    
 
   </head>
 
@@ -43,7 +50,7 @@
         <div class="col-12">
           <nav class="main-nav">
            
-            <a href="mainpage.html" class="logo">
+            <a href="index.html" class="logo">
               <img src="assets/images/CompanyLogo.png" alt="Study Sync">
             </a>
            
@@ -54,20 +61,20 @@
               <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
               <li class="scroll-to-section"><a href="#services">Features</a></li>
               <li class="scroll-to-section"><a href="#about">About Us</a></li>
-              <li class="scroll-to-section"><a href="#pricing">Pricing Plan</a></li>
-              <li class="scroll-to-section"><a href="#newsletter">Keep in Touch</a></li>
+              <li class="scroll-to-section"><a href="#pricing">Pricing</a></li>
+              <li class="scroll-to-section"><a href="#keep-in-touch">Keep in Touch</a></li>
               <li><div class="gradient-button"><a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></div></li> 
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
+
             </a>
-            <!-- ***** Menu End ***** -->
           </nav>
         </div>
       </div>
     </div>
   </header>
-  <!-- ***** Header Area End ***** -->
+
   
   <div id="modal" class="popupContainer" style="display:none;">
     <div class="popupHeader">
@@ -77,6 +84,7 @@
 
     <section class="popupBody">
         <!-- Social Login -->
+        <img class="popup-logo"    src="assets/images/SB-Redirect.png">
         <div class="social_login">
             <div class="">
                 <a href="#" class="social_box fb">
@@ -92,7 +100,7 @@
             </div>
 
             <div class="centeredText">
-                <span>Or use your Email address</span>
+                <span>Or use your Account</span>
             </div>
 
             <div class="action_btns">
@@ -104,51 +112,45 @@
         <!-- Username & Password Login form -->
         <div class="user_login">
             <form>
-                <label>Email / Username</label>
-                <input type="text" />
+                <label for="userName">Email / Username</label>
+                <input type="email" id="userName" required>
                 <br />
 
-                <label>Password</label>
-                <input type="password" />
+                <label for="userPw">Password</label>
+                <input type="password" id="userPw" required>
                 <br />
 
-                <div class="checkbox">
-                    <input id="remember" type="checkbox" />
-                    <label for="remember">Remember me on this computer</label>
+                <div id="remember" class="checkbox">
+                    <input id="rememberMe" value="IsRememberMe"  type="checkbox" required/>
+                    <label>Remember me on this computer</label>
                 </div>
 
                 <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
+                    <div class="one_half"><a class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
+                    <div class="one_half last"><a id="login_btn" class="btn btn_red" type="submit" onclick="check()">Login</a></div>
                 </div>
             </form>
 
-            <a href="#" class="forgot_password">Forgot password?</a>
+            
         </div>
 
         <!-- Register Form -->
         <div class="user_register">
             <form>
-                <label>Full Name</label>
-                <input type="text" />
+                
+
+                <label for="name">Email Address / Username</label>
+                <input type="email" id="name" required/>
                 <br />
 
-                <label>Email Address</label>
-                <input type="email" />
+                <label for="pw">Password</label>
+                <input type="password" id="pw"/>
                 <br />
 
-                <label>Password</label>
-                <input type="password" />
-                <br />
-
-                <div class="checkbox">
-                    <input id="send_updates" type="checkbox" />
-                    <label for="send_updates">Send me occasional email updates</label>
-                </div>
-
+              
                 <div class="action_btns">
                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+                    <div class="one_half last"><a class="btn btn_red" id="rgstr_btn" type="submit" onclick="store()">Register</a></div>
                 </div>
             </form>
         </div>
@@ -165,12 +167,12 @@
                 <div class="row">
                   <div class="col-lg-12">
                     <h2>Get Our Latest App From <strong>Study Sync</strong></h2>
-                    <h3>New Release: Study Buddies</h3>
-                    <p><i>A Student Collaborative Ssytem Application. It's a new release from Study Sync LLC this 2024 to help students to find match interest in terms of academics. Explore more for some advanced features.</i></p>
+                    <h3><e>New Release:</e> Study Buddies</h3>
+                    <p><i>A Student Collaborative System Application. It's a new release from Study Sync LLC this 2024 to help students to find match interest in terms of academics. Explore more for some advanced features.</i></p>
                   </div>
                   <div class="col-lg-12">
                     <div class="white-button first-button scroll-to-section">
-                      <a href="setup/Setup-SB-2024.exe" download="SB Installer">Download Now! <i class="fab fa-windows"></i></a>
+                      <a href="setup/Setup-SB-2024.exe" download="SB Installer">Download Windows <i class="fab fa-windows"></i></a>
                     </div>
                     <div class="white-button scroll-to-section">
                       <a href="Google Play - Clone/pages/GP-StudyBuddies.html" target="_blank">Google Play Store <i class="fab fa-google-play"></i></a>
@@ -240,7 +242,7 @@
             <h4>Interactive Guides</h4>
             <p>Explore into exciting learning experiences. Seamlessly navigate through rich multimedia content, interactive quizzes, and interesting activities suited to your learning needs.</p>
             <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+              <a href="https://taylorinstitute.ucalgary.ca/resources/module/developing-online-courses" target="_blank">Read More <i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -286,7 +288,7 @@
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">Comunication</a></h4>
+                <h4><a href="#">Communication</a></h4>
                 <p>Communication between teachers, students, and lerners is essential to promote learning cooperation and promotes children’s growth and performance. </p>
               </div>
             </div>
@@ -329,7 +331,7 @@
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
                             <h4>Rovick Bench Cruz</h4>
-                            <span class="date">20 April 2024</span>
+                            
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
                             <span class="category">Project Manager</span>
@@ -350,10 +352,10 @@
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
                             <h4>Sofia Anna Dacara</h4>
-                            <span class="date">29 April 2024</span>
+                           
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Sales and Marketing Specialist</span>
+                            <span class="category">Sales and Marketing</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-12">
                               <i class="fa fa-star"></i>
@@ -371,7 +373,7 @@
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
                             <h4>Rachelle Rotia</h4>
-                            <span class="date">27 April 2024</span>
+                            
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
                             <span class="category">Business Analyst</span>
@@ -392,7 +394,7 @@
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
                             <h4>Rey Dominic Red</h4>
-                            <span class="date">24 April 2024</span>
+                            
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
                             <span class="category">Technical Support</span>
@@ -413,7 +415,7 @@
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
                             <h4>Lemuel James Leonora</h4>
-                            <span class="date">25 April 2024</span>
+                           
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
                             <span class="category">Software Developer</span>
@@ -443,7 +445,7 @@
                                 <p>“In my role as project manager and CEO, I facilitated communication between programmers, designers, and content creators, which led to the swift launch of an accessible and full of features learning platform.”</p>
                               </div>
                               <div class="down-content">
-                                <img src="assets/images/thirdypogi.jpg" alt="">
+                                <img src="assets/images/cruz.png" alt="">
                                 <div class="right-content">
                                   <h4>Rovick Bench Cruz</h4>
                                   <span>Project Manager and CEO</span>
@@ -464,7 +466,7 @@
                                 <p>“As a sales and marketing specialist for our company, I collaborated effectively with the team to fully understand user demands, create appealing advertisement, and conduct at targeted campaigns through a variety of channels, each of it significantly increased app downloads and user engagement.”</p>
                               </div>
                               <div class="down-content">
-                                <img src="assets/images/client-image.jpg" alt="">
+                                <img src="assets/images/dacara.png" alt="">
                                 <div class="right-content">
                                   <h4>Sofia Anna Dacara</h4>
                                   <span>Sales and Marketing Specialist</span>
@@ -485,7 +487,7 @@
                                 <p>“In my role as a business analyst supporting modern innovation, I analyzed user data and market trends to identify opportunities for product improvement and expansion. By providing insights into user behavior and competitor analysis, I supported strategic decision-making, ultimately contributing to the app's continued success and growth.”</p>
                               </div>
                               <div class="down-content">
-                                <img src="assets/images/client-image.jpg" alt="">
+                                <img src="assets/images/rotia.png" alt="rotia">
                                 <div class="right-content">
                                   <h4>Rachelle Rotia</h4>
                                   <span>Business Analyst</span>
@@ -553,68 +555,80 @@
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
-            <h4>We Have The Best Pre-Order <em>Prices</em> You Can Get</h4>
+            <h4>We Have The <em>Best Pre-Order Prices</em> You Can Get</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+            <p>Choose the plan that's right for you. Whether you're just getting started with this app purchase or well down the path to exploration, we've got you covered.</p>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="pricing-item-pro">
-            <span class="price">Free!</span>
+          <div class="pricing-item-pro-free">
+            <img class ="free-banner" src="assets/images/Free-Banner-Plan.png">
+            <h4>Personal Plan</h4>
+            <div class="icon">
+              <img src="assets/images/pricing-table-icon-1.png" alt="">
+            </div>
+            <ul>
+              <li> Up to 50 Matches </li>
+              <li>Online Tutoring </li>
+              <li>Instant Chats & Calls</li>
+              <li>Interactive Collaboration</li>
+              <li class="non-function">Create Group Room & Forums</li>
+              <li class="non-function">Unlimited Learning Materials</li>
+              <li class="non-function">Whiteboard Add-Ons</li>
+              <li class="non-function">More Educational Tools</li>
+              <li class="non-function">Exclusive Chat Features</li>
+            </ul>
+            <div class="border-button-free">
+              <a onclick="window.location.href = '#top';">Download Study Buddies Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item-pro-standard">
+            <span class="price">₱249</span>
             <h4>Standard Plan</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
+              <img src="assets/images/pricing-table-icon-2.png" alt="">
             </div>
             <ul>
-              <li>Lorem Ipsum Dolores</li>
-              <li>20 TB of Storage</li>
-              <li class="non-function">Life-time Support</li>
-              <li class="non-function">Premium Add-Ons</li>
-              <li class="non-function">Fastest Network</li>
-              <li class="non-function">More Options</li>
+              <li>Up to 100 Matches</li>
+              <li>Online Tutoring</li>
+              <li>Instant Chats & Calls</li>
+              <li>Interactive Collaboration</li>
+              <li>Create Group Room & Forums</li>
+              <li>+10 Learning Materials</li>
+              <li class="non-function">Whiteboard Add-ons</li>
+              <li class="non-function">More Educational Tools</li>
+              <li class="non-function">Exclusive Chat Features</li>
             </ul>
-            <div class="border-button">
-              <a href="#">Purchase This Plan Now</a>
+            <div class="border-button-standard">
+              <a id="myButton" onclick="window.location.href = 'redirect-payment-standard.html';">Purchase This Plan Now</a>
+              
+
+              
             </div>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="pricing-item-pro">
-            <span class="price">EWAN!</span>
-            <h4>Professional Plan</h4>
-            <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
-            </div>
-            <ul>
-              <li>Lorem Ipsum Dolores</li>
-              <li>50 TB of Storage</li>
-              <li>Life-time Support</li>
-              <li>Premium Add-Ons</li>
-              <li class="non-function">Fastest Network</li>
-              <li class="non-function">More Options</li>
-            </ul>
-            <div class="border-button">
-              <a href="#">Purchase This Plan Now</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-pro">
-            <span class="price">PISO</span>
+          <div class="pricing-item-pro-premium">
+            <span class="price">₱499</span>
             <h4>Premium Plan</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
+              <img src="assets/images/pricing-table-icon-3.png" alt="">
             </div>
             <ul>
-              <li>Lorem Ipsum Dolores</li>
-              <li>120 TB of Storage</li>
-              <li>Life-time Support</li>
-              <li>Premium Add-Ons</li>
-              <li>Fastest Network</li>
-              <li>More Options</li>
+              <li>Unlimited Matches</li>
+              <li>Online Tutoring</li>
+              <li>Instant Chats & Calls</li>
+              <li>Interactive Collaboration</li>
+              <li>Create Group Room & Forums</li>
+              <li>Unlimited Learning Materials</li>
+              <li>Whiteboard Add-ons</li>
+              <li>More Educational Tools</li>
+              <li>Exclusive Chat Features</li>
             </ul>
-            <div class="border-button">
-              <a href="#">Purchase This Plan Now</a>
+            <div class="border-button-premium">
+              <a onclick="window.location.href = 'redirect-payment-premium.html';">Purchase This Plan Now</a>
             </div>
           </div>
         </div>
@@ -622,7 +636,7 @@
     </div>
   </div> 
 
-  <footer id="newsletter">
+  <footer id="keep-in-touch">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
@@ -631,25 +645,23 @@
           </div>
         </div>
         <div class="col-lg-6 offset-lg-3">
-          <form id="search" action="#" method="GET">
-            <div class="row">
-              <div class="col-lg-6 col-sm-6">
-                <fieldset>
-                  <input type="address" name="address" class="email" placeholder="Email Address..." autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-6 col-sm-6">
-                <fieldset>
-                  <a href="email-verfication.html">
-                  <button class="main-button">Join Now! </a><i class="fa fa-angle-right"></i></button>
-                </a>
+          <form id="search">
+           
+              
+              
+                
+                <button class="main-button" id="join-email"> Join Now! <i class="fa fa-angle-right"></i></button>
+                
                   
-                </fieldset>
-              </div>
-            </div>
+        
+          
           </form>
+          
         </div>
       </div>
+
+      
+      
       <div class="row">
         <div class="col-lg-3">
           <div class="footer-widget">
@@ -666,12 +678,12 @@
               <li><a href="#">Home</a></li>
               <li><a href="#">Services</a></li>
               <li><a href="#">About</a></li>
-              <li><a href="#">Courses</a></li>
+              <li><a href="#">Team</a></li>
               <li><a href="#">Pricing</a></li>
             </ul>
             <ul>
               <li><a href="#">About</a></li>
-              <li><a href="#">Courses</a></li>
+              <li><a href="#">Team</a></li>
               <li><a href="#">Pricing</a></li>
             </ul>
           </div>
@@ -712,7 +724,7 @@
   </footer>
 
 
-  <!-- Scripts -->
+  <!-- Mga plug-in Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
@@ -721,13 +733,226 @@
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
 
+  
+
+  <!-- Eto yung sa disable back function sa browser, no previous na hahaha-->
+
   <script>
+
+$(document).on('click', '#join-email', function(e) {
+			swal({
+			  title: 'Submit Email to Join',
+			  input: 'email',
+			  inputPlaceholder: 'Enter your active email',
+			  showCancelButton: true,
+			  confirmButtonText: 'Submit',
+			  showLoaderOnConfirm: true,
+			  preConfirm: (email) => {
+			    return new Promise((resolve) => {
+			      setTimeout(() => {
+			        if (email === 'example@gmail.com') {
+			          swal.showValidationError(
+			            'This email is already taken.'
+			          )
+			        }
+
+              else if(email === 'studysync@gmail.com') {
+			          swal.showValidationError(
+			            'This is a company gmail. Try again.'
+			          )
+			        }
+
+              else if(email === 'studybuddies@gmail.com') {
+			          swal.showValidationError(
+			            'You are not allowed to use this gmail. Try again.'
+			          )
+			        }
+			        resolve()
+			      }, 2000)
+			    })
+			  },
+			  allowOutsideClick: false
+			}).then((result) => {
+			  if (result.value) {
+			    swal({
+			      type: 'success',
+			      title: 'Thank you for joining!',
+			      html: 'Registered email: ' + result.value
+          
+			    })
+			  }
+			})
+		});
+    
     window.history.forward();
     function noBack()
     {
         window.history.forward();
     }
+
+  /*Disable mouse right-click naman eto, so bawal mag inspect element
+
+    document.addEventListener("contextmenu", function(event){
+      alert ("Sorry, right-click has been disabled");
+      event.preventDefault();  
+
+    }) */
+
+    document.addEventListener("keydown", function(e) {
+    if (e.which === 116) { //F5
+        e.preventDefault();
+        
+    }
+
+    if (e.which === 123) { //F12 
+        e.preventDefault();
+       
+    }
+});
+  /* Tas eto naman yung disable Ctrl+U key function - disable view source code*/
+
+  document.onkeydown = function (e) {       
+        if(e.ctrlKey && e.keyCode == 85) {      
+            alert("You're not allowed to view the source code. Restricted.");
+            return false;  
+        }      
+} 
+
+  /*Then eto  yung disable Ctrl+A and Ctrl+C */
+
+    document.addEventListener('keydown', function(event) {
+    
+    if ((event.ctrlKey || event.metaKey) && event.keyCode === 17) {
+        event.preventDefault();
+        alert ("You are not allowed to copy. Disabled.");
+    }
+});
+  
+
+
+
+
+function store(){
+
+var name = document.getElementById('name');
+var pw = document.getElementById('pw');
+var lowerCaseLetters = /[a-z]/g;
+var upperCaseLetters = /[A-Z]/g;
+var numbers = /[0-9]/g;
+
+if(name.value.length == 0){
+    alert('Please fill in email');
+
+}else if(pw.value.length == 0){
+    alert('Please fill in password');
+
+}else if(name.value.length == 0 && pw.value.length == 0){
+    alert('Please fill in email and password');
+
+}else if(pw.value.length > 8){
+    alert('Max of 8');
+
+}else if(!pw.value.match(numbers)){
+    alert('please add 1 number');
+
+}else if(!pw.value.match(upperCaseLetters)){
+    alert('please add 1 uppercase letter');
+
+}else if(!pw.value.match(lowerCaseLetters)){
+    alert('please add 1 lovercase letter');
+
+}else{
+    localStorage.setItem('name', name.value);
+    localStorage.setItem('pw', pw.value);
+    alert('Your account has been created');
+}
+}
+
+function store(){
+
+var name = document.getElementById('name');
+var pw = document.getElementById('pw');
+var lowerCaseLetters = /[a-z]/g;
+var upperCaseLetters = /[A-Z]/g;
+var numbers = /[0-9]/g;
+
+
+
+if(name.value.length == 0 && pw.value.length == 0){
+    alert('Both fields are empty.');
+}else if(name.value.length == 0){
+    alert('Please fill in email/username');
+
+}else if(pw.value.length == 0){
+    alert('Please fill in password');
+
+}else if(pw.value.length > 15){
+    alert('Max of 15 reached!');
+
+}else if(!pw.value.match(numbers)){
+    alert('Please Add 1 Number');
+
+}else if(!pw.value.match(upperCaseLetters)){
+    alert('Please Add 1 Uppercase Letter');
+
+}else if(!pw.value.match(lowerCaseLetters)){
+    alert('Please Add 1 Lowercase Letter');
+
+}else{
+    localStorage.setItem('name', name.value);
+    localStorage.setItem('pw', pw.value);
+    alert('Your account has been created. Please Log In');
+    window.location.href = 'index.html';
+}
+}
+
+
+//Eto naman yung Login Validation and Registration Function hehe
+
+function check(){
+var storedName = localStorage.getItem('name');
+var storedPw = localStorage.getItem('pw');
+
+var userName = document.getElementById('userName');
+var userPw = document.getElementById('userPw');
+var userRemember = document.getElementById("rememberMe");
+
+
+if(userName.value.length == 0 && userPw.value.length == 0){
+    alert('Please fill in email and password');
+}
+else if(userName.value.length == 0){
+    alert('Please fill in email/username.');
+}
+
+else if(userPw.value.length === 0){
+    alert('Please fill in password');
+}
+
+else if(userName.value !== storedName && userPw.value !== storedPw){
+    alert('Incorrect email/username or password!');
+}
+else if(userName.value !== storedName){
+    alert('Incorrect email');
+}
+else if(userPw.value !== storedPw){
+    alert('Incorrect password.');
+}
+
+else if(userName.value == storedName && userPw.value == storedPw){
+  window.location.href = 'coming-soon-countdown.html';
+    
+}
+
+else{
+    alert('Error on login');
+}
+}
   </script>
+
+   
+
+  
 
 </body>
 </html>
